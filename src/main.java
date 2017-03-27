@@ -52,6 +52,50 @@ public class main {
 		  zapis.println(globalna_liczba_znakow);
 		  zapis.close();
 	}
+	public static void zad3 (  String [] tab ) throws FileNotFoundException
+	{
+		
+		
+		  PrintWriter zapis = new PrintWriter("zadanie 3.txt");
+		  
+		  
+		  for(int i = 0;i<tab.length;i++)
+			{
+				  char[] tabCHAR =tab[i].toCharArray(); 
+					boolean flaga=true;
+					
+					for(int j =0;j<tabCHAR.length;j++ )
+					{
+						if(tabCHAR[j]==(tabCHAR[(tabCHAR.length-1)-j]))
+						{
+							
+						}	
+						else
+						{
+							flaga=false;
+							break;
+						}
+						
+					}
+				
+
+
+					if(flaga)
+					{
+						//System.out.println("Wyraz jest palindromem.");
+						zapis.println(tab[i]);
+					}
+					else
+					{
+						//System.out.println("wyraz nie jest palindromem.");
+					}
+				
+				  
+							 
+			}
+		  
+		  zapis.close();
+	}
 public static void main(String[] args) throws FileNotFoundException
 {
 	String nazwa = "dane.txt";
@@ -86,6 +130,7 @@ public static void main(String[] args) throws FileNotFoundException
 	
 	zad1(dane);
 	zad2(dane);
+	zad3(dane);
 	}
 }
 
