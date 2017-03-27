@@ -8,6 +8,8 @@ import java.util.Scanner;
 public class main {
 	public static void zad1 (  String [] tab ) throws FileNotFoundException
 	{
+		
+		
 		  PrintWriter zapis = new PrintWriter("zadanie 1.txt");
 		  zapis.println("a)");
 
@@ -29,6 +31,25 @@ public class main {
 						 zapis.println(""+tab[i]);
 						 }
 		}
+		  zapis.close();
+	}
+	
+	public static void zad2 (  String [] tab ) throws FileNotFoundException
+	{
+		
+		
+		  PrintWriter zapis = new PrintWriter("zadanie 2.txt");
+		  zapis.println("b)");
+		  int globalna_liczba_znakow=0;	
+		  
+		  for(int i = 0;i<tab.length;i++)
+			{
+				  char[] tabCHAR =tab[i].toCharArray(); 
+				  zapis.println(""+tab[i]+ "("+tabCHAR.length+")");
+				  globalna_liczba_znakow+=tabCHAR.length;
+							 
+			}
+		  zapis.println(globalna_liczba_znakow);
 		  zapis.close();
 	}
 public static void main(String[] args) throws FileNotFoundException
@@ -64,6 +85,7 @@ public static void main(String[] args) throws FileNotFoundException
 	
 	
 	zad1(dane);
+	zad2(dane);
 	}
 }
 
