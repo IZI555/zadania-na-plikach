@@ -95,6 +95,26 @@ public class main {
 			}
 		  
 		  zapis.close();
+
+	}
+		    static void zad4(String[] tab)throws FileNotFoundException
+		    {
+		    	
+		    	PrintWriter zapis = new PrintWriter("zadanie 4.txt");
+		    	int a = 0;
+		    	for(int i =0;i<tab.length;i++ )
+		    		
+		    	{
+		    		if(tab[i].contains("AA"))
+		    				{
+		    			zapis.println(tab[i]);
+		    			a++;
+		    				}
+		    		zapis.println("³¹cznie jest " +a+"wyrazow ktore maja 2 A obok siebie");
+		    		zapis.close();
+		    	}
+		    	
+
 	}
 public static void main(String[] args) throws FileNotFoundException
 {
@@ -131,6 +151,7 @@ public static void main(String[] args) throws FileNotFoundException
 	zad1(dane);
 	zad2(dane);
 	zad3(dane);
+	zad4(dane);
 	}
 }
 
